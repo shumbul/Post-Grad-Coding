@@ -1,4 +1,4 @@
-# Post-Grad-Coding-Interview-Prep
+# Post-Grad-Coding
 
 ## Aim: 
 - 2 questions everyday
@@ -10,7 +10,7 @@
 - [x] 11/06/2022
 - [x] 12/06/2022
 - [x] 13/06/2022
-- [ ] 14/06/2022
+- [x] 14/06/2022
 - [ ] 16/06/2022
 
 
