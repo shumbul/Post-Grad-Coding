@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/super-egg-drop/
+// https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/
 
 // recursive DP - gives TLE
 class Solution {
@@ -24,7 +24,7 @@ class Solution {
         return dp[e][f]=mini;
     }
 public:
-    int superEggDrop(int e, int f) {
+    int superEggDrop(int e=2, int f) {
         vector<vector<int>> dp(101, vector<int> (10001, -1));
         return help(e, f, dp);
     }
@@ -33,7 +33,7 @@ public:
 // 2D DP k*n giving TLE
 class Solution {
 public:
-    int superEggDrop(int k, int n) {
+    int superEggDrop(int k=2, int n) {
         int dp[k+1][n+1];
         memset(dp, 0, sizeof dp);
         for(int j=1;j<=n;j++){
