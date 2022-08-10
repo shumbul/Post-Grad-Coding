@@ -15,11 +15,11 @@ public:
         if(par_a!=par_b){
             if(rank[a]<rank[b]){
                 par[par_a]=par_b;
-                rank[b]++;
+                rank[par_b]++;
             }
             else{
                 par[par_b]=par_a;
-                rank[a]++;
+                rank[par_a]++;
             }
         }
     }
