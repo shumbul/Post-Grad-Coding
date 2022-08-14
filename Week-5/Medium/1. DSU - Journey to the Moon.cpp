@@ -17,8 +17,6 @@ vector<string> split(const string &);
  *  2. 2D_INTEGER_ARRAY astronaut
  */
  
-#define int long long int
-
 class DSU{
     vector<int> par, rank;
 public:
@@ -28,7 +26,7 @@ public:
         for(int i=0;i<n;i++)
             par[i]=i;
     }
-    int Find(int &a){
+    int Find(int a){
         if(a==par[a])
             return a;
         // path compression
@@ -41,18 +39,18 @@ public:
             return;
         if(rank[par_a]>=rank[par_b]){
             // a has larger group
-            rank[par_a]++;
+            rank[par_a]+=rank[par_b];
             par[par_b]=par_a;
         }
         else{
             // b has larger group
-            rank[par_b]++;
+            rank[par_b]+=rank[par_a];
             par[par_a]=par_b;
         }
     }
 };
 
-int journeyToMoon(int &n, vector<vector<int>> &astronaut) {
+long long int journeyToMoon(int &n, vector<vector<int>> &astronaut) {
     DSU dsu(n);
     for(auto &a: astronaut){
         dsu.Union(a[0], a[1]);
@@ -70,7 +68,7 @@ int journeyToMoon(int &n, vector<vector<int>> &astronaut) {
     return ans;
 }
 
-int32_t main()
+int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
 
@@ -100,7 +98,7 @@ int32_t main()
         }
     }
 
-    int result = journeyToMoon(n, astronaut);
+    long long int result = journeyToMoon(n, astronaut);
 
     fout << result << "\n";
 
@@ -147,6 +145,7 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
+
 
 /*
 Gives TLE on Testcase 11
