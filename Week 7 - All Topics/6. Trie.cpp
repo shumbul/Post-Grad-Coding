@@ -11,9 +11,7 @@ class Node {
         data=val;
         isTerminal=false;
     }
-}
-
-;
+};
 
 class Trie {
     Node* root;
@@ -50,6 +48,4 @@ class Trie {
 
         temp ->isTerminal=true;
     }
-}
-
-;
+};
