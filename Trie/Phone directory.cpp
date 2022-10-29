@@ -63,7 +63,7 @@ public:
 
 /*
 Time: O(n*l*N)
-Space: O(l*N)
+Space: O(l*n)
 where l = max length of a word in contact
         N = no. of contacts 
 */
