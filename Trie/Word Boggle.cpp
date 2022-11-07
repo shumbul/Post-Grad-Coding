@@ -27,8 +27,8 @@ class Solution {
             temp->eow=true;
         }
     };
-set<string> words;
-int dx[8]={0, 0, -1, -1, -1, 1, 1, 1}, dy[8]={1, -1, 0, -1, 1, 0, -1, 1};
+    set<string> words;
+    int dx[8]={0, 0, -1, -1, -1, 1, 1, 1}, dy[8]={1, -1, 0, -1, 1, 0, -1, 1};
     void dfs(int i, int j, string s, Node *root, vector<vector<char> >& board, int &m, int &n) {
         char c=board[i][j];
         board[i][j]='#';

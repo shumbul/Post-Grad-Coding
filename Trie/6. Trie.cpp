@@ -1,10 +1,9 @@
 // TRIE
 
 class Node {
-    public:
-        string data;
-    unordered_map < string,
-    Node *>children;
+public:
+    string data;
+    unordered_map <string, Node *>children;
     bool isTerminal;
 
     Node(string &val) {
@@ -16,7 +15,8 @@ class Node {
 class Trie {
     Node* root;
 
-    public: Trie() {
+public: 
+    Trie() {
         root=new Node("\0");
     }
 
