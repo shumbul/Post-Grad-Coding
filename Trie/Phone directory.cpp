@@ -67,3 +67,18 @@ Space: O(l*n)
 where l = max length of a word in contact
         N = no. of contacts 
 */
+
+/*
+Input: 
+n = 3
+contact[] = {"geeikistest", "geeksforgeeks", 
+"geeksfortest"}
+s = "geeips"
+Output:
+geeikistest geeksforgeeks geeksfortest
+geeikistest geeksforgeeks geeksfortest
+geeikistest geeksforgeeks geeksfortest
+geeikistest
+0
+0
+*/

@@ -58,3 +58,8 @@ public:
 Time: O(length of serachWord + size of products n) 
 Space: O(n)
 */
+
+/*
+Input: products = ["mobile","mouse","moneypot","monitor","mousepad"], searchWord = "mouse"
+Output: [["mobile","moneypot","monitor"],["mobile","moneypot","monitor"],["mouse","mousepad"],["mouse","mousepad"],["mouse","mousepad"]]
+*/

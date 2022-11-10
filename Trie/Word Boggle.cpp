@@ -1,4 +1,5 @@
 // https://practice.geeksforgeeks.org/problems/word-boggle4143/1
+// Trie + DFS with backtracking
 
 class Solution {
     class Node {
@@ -30,11 +31,13 @@ class Solution {
     set<string> words;
     int dx[8]={0, 0, -1, -1, -1, 1, 1, 1}, dy[8]={1, -1, 0, -1, 1, 0, -1, 1};
     void dfs(int i, int j, string s, Node *root, vector<vector<char> >& board, int &m, int &n) {
+        // for backtracking
         char c=board[i][j];
         board[i][j]='#';
         
         if(root->eow){
             root->eow=false;
+            // don't break, this might be a suffix to another word
             words.insert(s);
         }
         
@@ -75,4 +78,14 @@ public:
 /*
 Time: O(n*m*(8^k))
 Space: O(l*k), where i is the no. of words i dict and k is the max length of a word in the dict
+*/
+
+/*
+Input:
+N = 4
+dictionary = {"GEEKS","FOR","QUIZ","GO"}
+R = 3, C = 3 
+board = {{G,I,Z},{U,E,K},{Q,S,E}}
+Output:
+GEEKS QUIZ
 */
