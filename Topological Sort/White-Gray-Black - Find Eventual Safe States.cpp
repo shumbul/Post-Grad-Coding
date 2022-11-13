@@ -33,3 +33,8 @@ public:
 Time: O(n+v)
 Space: O(n+v)
 */
+
+/*
+Input: graph = [[1,2],[2,3],[5],[0],[5],[],[]]
+Output: [2,4,5,6]
+*/
