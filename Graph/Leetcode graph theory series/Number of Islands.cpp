@@ -29,3 +29,9 @@ public:
         return ans;
     }
 };
+
+/*
+l=size of largest component
+Time: O(m*n*l)
+Space: O(m*n)
+*/

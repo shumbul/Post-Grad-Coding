@@ -38,6 +38,7 @@ public:
 };
 
 /*
-Time: O(m*n)
+l=size of largest component
+Time: O(m*n*l)
 Space: O(m*n)
 */
